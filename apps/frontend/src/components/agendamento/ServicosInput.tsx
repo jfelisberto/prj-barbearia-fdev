@@ -10,12 +10,12 @@ export interface ServicosInputProps {
 function Opcao(props: { servico: Servico; onClick: (s: Servico) => void; selecionado?: boolean }) {
     return (
         <div
-            className={`flex flex-col items-center cursor-pointer select-none border rounded-lg overflow-hidden 
+            className={`flex flex-col items-center cursor-pointer select-none border rounded-lg overflow-hidden
             ${props.selecionado ? 'border-green-400' : 'border-zinc-700'}`}
             onClick={() => props.onClick(props.servico)}
         >
             <Image
-                src={props.servico.imagemURL}
+                src={props.servico.imagemUrl}
                 alt={props.servico.nome}
                 width={150}
                 height={120}

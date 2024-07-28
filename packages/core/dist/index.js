@@ -35,25 +35,25 @@ module.exports = __toCommonJS(src_exports);
 var clientes = [
   {
     id: 1,
-    imagemURL: "/clientes/cliente-1.jpg",
+    imagemUrl: "/clientes/cliente-1.jpg",
     nome: "Ricardo Soundbar",
     testemunho: 'Chega falando alto e ocupando espa\xE7o com seu tamanho de viking, mas que tem um cora\xE7\xE3o do tamanho de seu topete! Um verdadeiro gigante gente boa, ele sempre diz: "Os caras aqui s\xE3o brutais no corte e na amizade! Servi\xE7o top, recomendo de olhos fechados!"'
   },
   {
     id: 2,
-    imagemURL: "/clientes/cliente-2.jpg",
+    imagemUrl: "/clientes/cliente-2.jpg",
     nome: 'Tiaguinho - "O Atacante"',
     testemunho: 'Fan\xE1tico por futebol! Ele sempre chega animado, pronto para bater um papo e discutir o \xFAltimo jogo. Tiaguinho sempre diz: "Cortar cabelo aqui \xE9 muito legal, mas eu prefiro fazer gol!"'
   },
   {
     id: 3,
-    imagemURL: "/clientes/cliente-3.jpg",
+    imagemUrl: "/clientes/cliente-3.jpg",
     nome: "Patr\xEDcia",
     testemunho: 'Nossa cliente com o cabelo mais vermelho do bairro e uma paix\xE3o por doramas que n\xE3o tem fim! Patr\xEDcia diz: "Aqui \xE9 meu lugar favorito! Saio com o cabelo perfeito e ainda compartilho todos os dramas dos doramas. Servi\xE7o top demais!"'
   },
   {
     id: 4,
-    imagemURL: "/clientes/cliente-4.jpg",
+    imagemUrl: "/clientes/cliente-4.jpg",
     nome: "Sr. Carlos",
     testemunho: 'Nosso cliente mais velho e cheio de hist\xF3rias incr\xEDveis que nunca se repetem! Ele anima a barbearia com suas aventuras e sabedoria. Sr. Carlos diz: "A Barba Brutal \xE9 raiz, me lembra a barbearia que eu ia quando era moleque. Servi\xE7o excelente e hist\xF3rias boas garantidas"'
   }
@@ -121,7 +121,7 @@ var servicos = [
     descricao: "Venha receber um corte de Viking, com l\xE2mina na pele e estilo de guerreiro. Saia pronto para enfrentar qualquer batalha com um visual que imp\xF5e respeito.",
     preco: 55,
     qtdeSlots: 3,
-    imagemURL: "/servicos/corte-de-cabelo.jpg"
+    imagemUrl: "/servicos/corte-de-cabelo.jpg"
   },
   {
     id: 2,
@@ -129,7 +129,7 @@ var servicos = [
     descricao: "Venha dar um trato na sua barba de lenhador, com aparo preciso e estilo de macho raiz. Saia com uma barba que imp\xF5e respeito e faz tremer at\xE9 as \xE1rvores.",
     preco: 45,
     qtdeSlots: 2,
-    imagemURL: "/servicos/corte-de-barba.jpg"
+    imagemUrl: "/servicos/corte-de-barba.jpg"
   },
   {
     id: 3,
@@ -137,7 +137,7 @@ var servicos = [
     descricao: "Venha transformar suas patas de urso em garras de lobo. Nosso servi\xE7o de Manicure & Pedicure para homens \xE9 t\xE3o bruto quanto voc\xEA, mas com um toque de classe.",
     preco: 40,
     qtdeSlots: 2,
-    imagemURL: "/servicos/manicure-pedicure.jpg"
+    imagemUrl: "/servicos/manicure-pedicure.jpg"
   },
   {
     id: 4,
@@ -145,7 +145,7 @@ var servicos = [
     descricao: 'Nosso combo "Alpha" inclui um corte de cabelo de Viking, uma barba de lenhador e manicure & pedicure de gladiador. Saia pronto para enfrentar qualquer batalha com estilo e unhas afiadas.',
     preco: 95,
     qtdeSlots: 2,
-    imagemURL: "/servicos/combo.jpg"
+    imagemUrl: "/servicos/combo.jpg"
   },
   {
     id: 5,
@@ -153,7 +153,7 @@ var servicos = [
     descricao: "Transforme seu pequeno aventureiro em um mini ca\xE7ador, com um corte cheio de atitude e estilo. Cabelo afiado como uma guitarra e maneiro como uma Harley.",
     preco: 60,
     qtdeSlots: 2,
-    imagemURL: "/servicos/corte-infantil.jpg"
+    imagemUrl: "/servicos/corte-infantil.jpg"
   },
   {
     id: 6,
@@ -161,7 +161,7 @@ var servicos = [
     descricao: "Prepare-se para o grande dia com um tratamento digno de um verdadeiro guerreiro da estrada. Corte de cabelo afiado, barba de lenhador e manicure de motoqueiro, tudo enquanto voc\xEA relaxa ao som de rock pesado.",
     preco: 189,
     qtdeSlots: 2,
-    imagemURL: "/servicos/dia-de-noivo.jpg"
+    imagemUrl: "/servicos/dia-de-noivo.jpg"
   }
 ];
 var servicos_default = servicos;
@@ -199,7 +199,6 @@ var ObterHorariosOcupados = class {
 
 // src/utils/AgendaUtils.ts
 var AgendaUtils = class {
-  static minutos = [0, 15, 30, 45];
   static horariosDoDia() {
     return {
       manha: this.gerarHorarios([8, 9, 10, 11]),
@@ -216,6 +215,7 @@ var AgendaUtils = class {
     }, []);
   }
 };
+AgendaUtils.minutos = [0, 15, 30, 45];
 
 // src/utils/DataUtils.ts
 var DataUtils = class {
