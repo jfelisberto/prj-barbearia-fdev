@@ -13,7 +13,7 @@ interface Servico {
     descricao: string;
     preco: number;
     qtdeSlots: number;
-    imagemURL: string;
+    imagemUrl: string;
 }
 
 interface Agendamento {
@@ -39,7 +39,7 @@ declare class ObterHorariosOcupados {
 
 declare const clientes: {
     id: number;
-    imagemURL: string;
+    imagemUrl: string;
     nome: string;
     testemunho: string;
 }[];
@@ -69,6 +69,7 @@ declare class AgendaUtils {
 declare class DataUtils {
     static hoje(): Date;
     static aplicarHorario(data: Date, horario: string): Date;
+    static formatarData(data: Date): string;
 }
 
 declare class TelefoneUtils {
