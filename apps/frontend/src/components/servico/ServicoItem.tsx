@@ -10,13 +10,13 @@ export default function ServicoItem(props: ServicoItemProps) {
     return (
         <div
             className={`
-                flex rounded-xl overflow-hidden bg-zinc-800
+                flex rounded-xl overflow-hidden bg-zinc-800 
                 ${props.onClick && 'cursor-pointer'} select-none
             `}
             onClick={() => props.onClick?.(props.servico)}
         >
             <Image
-                src={props.servico.imagemUrl}
+                src={props.servico.imagemURL}
                 width={150}
                 height={150}
                 alt={props.servico.nome}

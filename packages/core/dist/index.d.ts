@@ -13,7 +13,7 @@ interface Servico {
     descricao: string;
     preco: number;
     qtdeSlots: number;
-    imagemUrl: string;
+    imagemURL: string;
 }
 
 interface Agendamento {
@@ -39,7 +39,7 @@ declare class ObterHorariosOcupados {
 
 declare const clientes: {
     id: number;
-    imagemUrl: string;
+    imagemURL: string;
     nome: string;
     testemunho: string;
 }[];

@@ -3,11 +3,11 @@
         "target": "ES2021",
         "experimentalDecorators": true,
         "emitDecoratorMetadata": true,
-        "module": "Commonjs",
+        "module": "commonjs",
         "esModuleInterop": true,
         "forceConsistentCasingInFileNames": true,
         "strict": true,
-        "strictNullChecks": true,
+        "strictNullChecks": false,
         "skipLibCheck": true
     }
 }

@@ -1,10 +1,9 @@
 'use client'
-import { stringify } from "querystring";
-import { useCallback } from "react";
+import { useCallback } from 'react'
 
 export default function useLocalStorage() {
     const get = useCallback((chave: string) => {
-        const valorLocal = window?.localStorage?. getItem(chave)
+        const valorLocal = window?.localStorage?.getItem(chave)
         return valorLocal ? JSON.parse(valorLocal) : null
     }, [])
 
